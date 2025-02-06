@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import CounterButton from "./components/counter-button/index.jsx";
 
 function App() {
   const getInitialCount = () => {
@@ -13,22 +14,11 @@ function App() {
     localStorage.setItem("count", count);
   }, [count]);
 
-  function increaseButtonOnClick() {
-    setCount((prevCount) => prevCount + 1);
-  }
-
-  function decreaseButtonOnClick() {
-    setCount((prevCount) => (prevCount > 0 ? prevCount - 1 : 0));
-  }
   return (
-    <div className="App">
-      <button onClick={increaseButtonOnClick} className="increaseButton">
-        +
-      </button>
+    <div className="app">
+      <CounterButton type="inc" setter={setCount} />
       <span className="counter">{count}</span>
-      <button onClick={decreaseButtonOnClick} className="decreaseButton">
-        -
-      </button>
+      <CounterButton type="dec" setter={setCount} />
     </div>
   );
 }
