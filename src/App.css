@@ -1,0 +1,43 @@
+body {
+  background-color: rgb(57, 90, 101);
+}
+.App {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  display: flex;
+  height: 100vh;
+}
+.counter {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0 20px;
+}
+
+.increaseButton {
+  color: rgb(139, 189, 199);
+  border-radius: 50%;
+  transition-duration: 0.4s;
+  transform: scale(6);
+}
+.increaseButton:hover {
+  background-color: #2d4c67;
+  color: white;
+}
+.increaseButton {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.decreaseButton {
+  color: lightcoral;
+  border-radius: 50%;
+  transition-duration: 0.4s;
+  transform: scale(6);
+}
+.decreaseButton:hover {
+  background-color: lightcoral;
+  color: white;
+}
+.decreaseButton {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
